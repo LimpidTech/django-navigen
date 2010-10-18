@@ -1,6 +1,7 @@
 # django navigation
 #### Brandon R. Stoner <monokrome@monokro.me>
 
-Provides navigation components to simplify dynamic navigation menu
-generation in django.
+## What is this?
+The django-navigation application provides components that simplify the creation of
+dynamic navigation menus in django.
 
