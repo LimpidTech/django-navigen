@@ -15,6 +15,9 @@ class NavigationTree(models.Model):
     def __unicode__(self):
         return self.name
 
+    def get_trunk(self):
+        return NavigationItem.objects.filter(tree=self, parent=None).all().order_by('priority')
+
     def save(self):
         if self.access_name == "":
             self.access_name = slugify(self.name).replace('-', '_')
