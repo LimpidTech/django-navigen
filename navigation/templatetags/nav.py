@@ -48,7 +48,7 @@ def navtree(parser, token):
     try:
         tag_name, tree_name, user = token.split_contents()
     except ValueError:
-        raise template.TemplateSyntaxError, "%s tag requires exactly 1 argument"
+        raise template.TemplateSyntaxError, "%s tag requires exactly 2 arguments. A tree access name and a user."
 
     return NavigationTreeNode(tree_name, user)
 
@@ -82,7 +82,7 @@ def navbranch(parser, token):
     try:
         tag_name, branch, user = token.split_contents()
     except ValueError:
-        raise template.TemplateSyntaxError, "%s tag requires exactly 1 argument"
+        raise template.TemplateSyntaxError, "%s tag requires exactly 2 arguments. A branch and the user."
 
     return NavigationBranchNode(branch, user)
 
