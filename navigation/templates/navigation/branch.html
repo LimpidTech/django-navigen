@@ -1,0 +1,11 @@
+{% load nav %}
+
+<ul>
+	{% for leaf in branch %}
+	<li>
+		<a href="{{ leaf.location }}" title="{{ leaf.title }}">{{ leaf.label }}</a>
+
+		{% navbranch leaf.get_children %}
+	</li>
+	{% endfor %}
+</ul>
