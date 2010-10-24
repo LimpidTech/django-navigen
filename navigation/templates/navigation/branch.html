@@ -2,10 +2,12 @@
 
 <ul>
 	{% for leaf in branch %}
+	{% if leaf.required_permissions.all|length == 0 or user.user_permissions.all|list_items_in_list:leaf.required_permissions.all or user.is_superuser %}
 	<li>
 		<a href="{{ leaf.location }}" title="{{ leaf.title }}">{{ leaf.label }}</a>
 
-		{% navbranch leaf.get_children %}
+		{% navbranch leaf.get_children user %}
 	</li>
+	{% endif %}
 	{% endfor %}
 </ul>
