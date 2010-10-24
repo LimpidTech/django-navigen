@@ -24,8 +24,9 @@ class NavigationItem(models.Model):
     location = models.CharField(max_length=256)
     priority = models.PositiveIntegerField(default=0)
     required_permissions = models.ManyToManyField(Permission, null=True, blank=True)
-    guests_only = models.BooleanField(default=False)
     staff_only = models.BooleanField(default=False)
+    guests_only = models.BooleanField(default=False)
+    guests_hidden = models.BooleanField(default=False)
 
     parent = models.ForeignKey('self', blank=True, null=True,
         related_name='children')
