@@ -86,12 +86,16 @@ def navbranch(parser, token):
 
     return NavigationBranchNode(branch, user)
 
+@register.filter(name='navleaf_authorized')
+def navleaf_authorized(user, leaf):
+    if user.is_superuser:
+        return True
 
-@register.filter(name='list_items_in_list')
-def list_items_in_list(needles, haystack):
-    for value in haystack:
-        if value not in needles:
-            return False
+    if leaf.guests_only and user.is_authenticated() is True:
+        return False
 
-    return True
+    if leaf.staff_only and user.is_staff is False:
+        return False
+
+    return user.has_perms(leaf.required_permissions.all())
 
