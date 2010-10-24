@@ -42,9 +42,6 @@ class NavigationItem(models.Model):
                                                   choices=USER_VISIBILITY_CHOICES,
                                                   default=USER_VISIBILITY_CHOICES[0][0])
 
-    def zombie(self):
-        return ((self.parent == None) and (self.tree == None))
-
     def get_children(self):
         return self.children.all().order_by('priority')
 
