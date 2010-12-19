@@ -88,14 +88,14 @@ def navbranch(parser, token):
 
 @register.filter(name='navleaf_authorized')
 def navleaf_authorized(user, leaf):
-    if user.is_superuser:
-        return True
-
     if leaf.guests_hidden and user.is_authenticated() is False:
         return False
 
     if leaf.guests_only and user.is_authenticated() is True:
         return False
+
+    if user.is_superuser:
+        return True
 
     if leaf.staff_only and user.is_staff is False:
         return False
