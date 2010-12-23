@@ -1,0 +1,3 @@
+recursive-include navigation/templates *
+recursive-include navigation/static *
+recursive-include navigation/media *
