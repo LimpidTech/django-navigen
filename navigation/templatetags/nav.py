@@ -94,9 +94,6 @@ def navleaf_authorized(user, leaf):
     if leaf.guests_only and user.is_authenticated() is True:
         return False
 
-    if user.is_superuser:
-        return True
-
     if leaf.staff_only and user.is_staff is False:
         return False
 
