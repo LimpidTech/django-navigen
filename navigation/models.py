@@ -31,7 +31,7 @@ class NavigationItem(models.Model):
     parent = models.ForeignKey('self', blank=True, null=True,
         related_name='children')
 
-    tree = models.ForeignKey(NavigationTree, blank=True, null=True,
+    tree = models.ManyToManyField(NavigationTree, blank=True, null=True,
                                   help_text="A navigation tree is a certain collection of"
                                       "navigation items, so that different navigation bars"
                                       "can exist.")
