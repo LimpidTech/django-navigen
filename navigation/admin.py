@@ -5,7 +5,7 @@ import re
 url_re = re.compile(r'^(https??://([a-zA-Z0-9]+\.)+[a-zA-Z0-9]([:@][a-zA-Z0-9@%-_\.]){0,2})?/\S*$')
 
 class NavigationItemAdmin(admin.ModelAdmin):
-   pass
+   list_filter = ('tree',)
 
 class NavigationTreeAdmin(admin.ModelAdmin):
     pass
