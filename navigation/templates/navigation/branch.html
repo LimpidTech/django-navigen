@@ -6,7 +6,11 @@
 	<li>
 		<a href="{{ leaf.location }}" title="{{ leaf.title }}">{{ leaf.label }}</a>
 
-		{% navbranch leaf.get_children user %}
+	{% with leaf.get_children as leaves %}
+		{% if leaves|length %}
+			{% navbranch leaves user %}
+		{% endif %}
+	{% endwith %}
 	</li>
 	{% endif %}
 {% endfor %}
