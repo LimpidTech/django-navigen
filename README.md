@@ -1,4 +1,4 @@
-# django navigation
+# django navigen
 #### Brandon R. Stoner <monokrome@monokro.me>
 
 ## What is this?
@@ -7,15 +7,15 @@ This application provides components that simplify the creation of dynamic navig
 
 ## Getting started
 
-Just like other django apps, django-navigation is really easy to get started with. Simply install it with:
+Just like other django apps, django-navigen is really easy to get started with. Simply install it with:
 
     python setup.py install
 
-After this is installed, open up your project's settings.py file and add 'navigation' to your INSTALLED_APPS.
+After this is installed, open up your project's settings.py file and add 'navigen' to your INSTALLED_APPS.
 
     INSTALLED_APPS = (
         # Your other apps listed here
-        'navigation',
+        'navigen',
     )
 
 Now, as a final step - have django synchronize your database:
@@ -24,7 +24,7 @@ Now, as a final step - have django synchronize your database:
 
 ## How does this work?
 
-You should now have all that you need to use django-navigation within your application. In order to test this it is good to know the terminology used by the navigation system or you might be confused or think that the application is overly complicated. However, remember that django-navigation was made with the following goals in mind:
+You should now have all that you need to use django-navigen within your application. In order to test this it is good to know the terminology used by the navigation system or you might be confused or think that the application is overly complicated. However, remember that django-navigen was made with the following goals in mind:
 
 * All menus are generated dynamically
 * Menu items reflect the context of the user, and their related permissions. Users shouldn't see what they can't access.
