@@ -1,7 +1,7 @@
 from django import template
 from django.template.loader import get_template
 from django.conf import settings
-from navigation.models import NavigationTree, NavigationItem
+from ..models import NavigationTree, NavigationItem
 
 register = template.Library()
 
