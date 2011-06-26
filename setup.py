@@ -20,15 +20,15 @@ for filename in meta_files:
 classifiers = meta_files['CLASSIFIERS.txt'].split('\n')
 classifiers.remove('')
 
-setup(name='django-nav',
+setup(name='django-navigen',
       version='0.1',
       description='Dynamic navigation menu generation for django.',
       long_description=meta_files['README.md'],
       classifiers=classifiers,
       author='Brandon R. Stoner',
       author_email='monokrome@limpidtech.com',
-      url='http://github.com/LimpidTech/django-nav',
-      packages=['nav'],
+      url='http://github.com/LimpidTech/django-navigen',
+      packages=['navigen'],
       keywords = 'web django menu navigation',
 )
 
