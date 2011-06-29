@@ -21,14 +21,14 @@ classifiers = meta_files['CLASSIFIERS.txt'].split('\n')
 classifiers.remove('')
 
 setup(name='django-navigen',
-      version='0.1',
+      version='0.1.1-hotfix',
       description='Dynamic navigation menu generation for django.',
       long_description=meta_files['README.md'],
       classifiers=classifiers,
       author='Brandon R. Stoner',
       author_email='monokrome@limpidtech.com',
       url='http://github.com/LimpidTech/django-navigen',
-      packages=['navigen'],
+      packages=['navigen', 'navigen.templatetags'],
       keywords = 'web django menu navigation',
 )
 
