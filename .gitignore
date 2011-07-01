@@ -6,8 +6,10 @@ bin/*
 lib/*
 include/*
 
-# Files built by pip
+# Files built by packaging tools
 build/*
+dist/*
+.Python
 
 # Distutils files
 dist/*
