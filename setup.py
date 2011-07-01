@@ -28,7 +28,7 @@ setup(name='django-navigen',
       author='Brandon R. Stoner',
       author_email='monokrome@limpidtech.com',
       url='http://github.com/LimpidTech/django-navigen',
-      packages=['navigen'],
+      packages=['navigen', 'navigen.templatetags'],
       keywords = 'web django menu navigation',
 )
 
