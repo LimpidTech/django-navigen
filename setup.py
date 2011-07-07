@@ -21,7 +21,7 @@ classifiers = meta_files['CLASSIFIERS.txt'].split('\n')
 classifiers.remove('')
 
 setup(name='django-navigen',
-      version='0.1.2-hotfix',
+      version='0.1.3',
       description='Dynamic navigation menu generation for django.',
       long_description=meta_files['README.md'],
       classifiers=classifiers,
