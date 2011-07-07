@@ -18,7 +18,6 @@ class NavigationTreeNode(template.Node):
 
         c = template.Context({
             'leaves': leaves,
-            'hey': 'okay',
         })
 
         return t.render(c)
