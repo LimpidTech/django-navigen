@@ -19,3 +19,6 @@ MANIFEST
 # TextMate projects
 *.tmproj
 
+# Where I keep my django project for testing.
+sandbox/*
+
