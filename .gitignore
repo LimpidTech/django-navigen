@@ -16,3 +16,6 @@ dist/*
 *.egg-info
 MANIFEST
 
+# TextMate projects
+*.tmproj
+
