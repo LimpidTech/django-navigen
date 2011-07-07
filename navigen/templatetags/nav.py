@@ -26,7 +26,7 @@ class NavigationTreeNode(template.Node):
         t = get_template('navigation/tree.html')
         c = template.Context(
             {
-                'branch': tree.get_trunk(),
+                'tree': tree,
                 'user': user 
             }
         )
