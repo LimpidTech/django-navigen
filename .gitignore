@@ -22,3 +22,8 @@ MANIFEST
 # Where I keep my django project for testing.
 sandbox/*
 
+# Hidden files without git-relation
+.*
+!.gitignore
+!.gitmodules
+
